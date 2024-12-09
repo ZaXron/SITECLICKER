@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клікер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <h2>Ласкаво просимо на наш сайт!</h2>
+            <p>Почни тестувати свої навички у клікері та інших іграх!</p>
+            <button id="closeModal" class="btn">Почати</button>
+        </div>
+    </div>
+
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="#clicker">Клікер</a></li>
+            <li><a href="#leaderboard">Таблиця лідерів</a></li>
+            <li><a href="#other-tests">Інші тести</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="theme-toggle">
+        <button id="themeButton" class="theme-btn">Theme</button>
+    </div>
+
+    
+    <div id="clicker" class="section">
+        <h1>Клікер</h1>
+        <p>Виберіть режим гри і натискайте кнопку, щоб набрати очки:</p>
+
+        <div id="modes">
+            <button class="mode-btn" data-time="10">10 секунд</button>
+            <button class="mode-btn" data-time="20">20 секунд</button>
+            <button class="mode-btn" data-time="30">30 секунд</button>
+            <button class="mode-btn" data-time="60">1 хвилина</button>
+            <button class="mode-btn" data-time="120">2 хвилини</button>
+        </div>
+
+        <p id="timer">Таймер: 0</p>
+
+        <button id="clickButton" class="main-btn" disabled>Кликни меня!</button>
+        <p id="score">Очки: 0</p>
+
+        <p id="result" style="display:none;">Ви набрали <span id="finalScore">0</span> очков за час!</p>
+    </div>
+
+    <div id="leaderboard" class="section">
+        <h1>Таблиця лідерів</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Місто</th>
+                    <th>Ім'я</th>
+                    <th>Очки</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-table"></tbody>
+        </table>
+    </div>
+
+    <div id="other-tests" class="section">
+        <h1>Інші тести</h1>
+        <p>Виберіть тест для перевірки своїх навичок:</p>
+        <button class="test-btn" id="reactionTestBtn">Тест на реакцію</button>
+        <button class="test-btn" id="clickSpeedTestBtn">Тест на швидкість натискання пропуску</button>
+        <button class="test-btn" id="mouseSpinTestBtn">Тест на обертання мишки</button>
+
+        <div id="reactionTest" style="display:none;">
+            <p>Натисніть кнопку, як тільки вона з'явиться!</p>
+            <button id="reactionButton" class="test-btn">Чекайте...</button>
+            <p id="reactionResult"></p>
+        </div>
+
+        <div id="clickSpeedTest" style="display:none;">
+            <p>Натискайте пробіл якнайшвидше!</p>
+            <p id="clickSpeedResult">Очки: 0</p>
+        </div>
+
+        <div id="mouseSpinTest" style="display:none;">
+            <p>Рухайте мишку, щоб почати обертання!</p>
+            <p id="mouseSpinResult">Кількість обертань: 0</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
